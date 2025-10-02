@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Routes: London & Arab Destinations</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Your Journey Starts Here</h1>
+            <p>Exclusive ticket booking for London and the Arab World.</p>
+        </div>
+    </header>
+
+    <div class="booking-card">
+        <h2>Find Your Flight</h2>
+        <form id="bookingForm">
+            
+            <div class="input-group">
+                <label for="departure">Departure City</label>
+                <input type="text" id="departure" name="departure" placeholder="e.g., Cairo, Dubai, London" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Select a Destination</option>
+                    <optgroup label="London (UK)">
+                        <option value="LHR">London Heathrow</option>
+                        <option value="LGW">London Gatwick</option>
+                    </optgroup>
+                    <optgroup label="Arab Countries">
+                        <option value="DXB">Dubai, UAE</option>
+                        <option value="JED">Jeddah, Saudi Arabia</option>
+                        <option value="CAI">Cairo, Egypt</option>
+                        <option value="DOH">Doha, Qatar</option>
+                        <option value="AUH">Abu Dhabi, UAE</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input type="date" id="departure-date" name="departure_date" required>
+                </div>
+                <div class="input-group">
+                    <label for="passengers">Passengers</label>
+                    <input type="number" id="passengers" name="passengers" value="1" min="1" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="search-btn">Search Flights</button>
+
+            <p id="searchMessage" class="message-text"></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Global Routes | Specializing in UK and Middle East Travel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
